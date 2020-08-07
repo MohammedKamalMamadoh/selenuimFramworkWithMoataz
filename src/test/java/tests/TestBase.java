@@ -76,7 +76,8 @@ public class TestBase extends AbstractTestNGCucumberTests {
 		EventDriver= new EventFiringWebDriver(driver);
 		webDriverEvwntListnerObject = new WebDriverEventLis();
 		EventDriver.register(webDriverEvwntListnerObject);
-		driver=EventDriver; driver.manage().window().maximize();
+		driver=EventDriver;
+		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
